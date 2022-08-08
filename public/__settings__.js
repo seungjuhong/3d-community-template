@@ -8,7 +8,7 @@ CONTEXT_OPTIONS = {
     'preferWebGl2': true,
     'powerPreference': "high-performance"
 };
-SCRIPTS = [  ];
+SCRIPTS = [ 96881723 ];
 CONFIG_FILENAME = "config.json";
 INPUT_SETTINGS = {
     useKeyboard: true,
