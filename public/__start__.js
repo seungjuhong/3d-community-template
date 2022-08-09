@@ -204,6 +204,7 @@
                         }
 
                         app.start();
+                        app.fire("playcanvas#load")
                     });
                 });
             });

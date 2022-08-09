@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState, useEffect } from "react";
+import "./App.css";
+var app = window.pc.app;
+console.log("pc", app);
 function App() {
+  const [isLoaded, setLoaded] = useState(false);
+  const completeLoad = () => {
+    setLoaded(true);
+  };
+  useEffect(() => {
+    app.on("playcanvas#load", completeLoad);
+    return () => {
+      app.off("playcanvas#load", completeLoad);
+    };
+  }, []);
+
+  if (!isLoaded) return;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>asdf</div>
     </div>
   );
 }
